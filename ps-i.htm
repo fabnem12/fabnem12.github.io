@@ -1,0 +1,48 @@
+<html>
+  <head>
+    <title>
+      PS-I
+    </title>
+    <script>
+      function init() {
+          document.getElementById("ident").innerHTML = "" + Math.round(1000000 + Math.random() * (10000000-1)).toString(16);
+      }
+      </script>
+  </head>
+  <body>
+    Ton identifiant est : <span id="ident"></span>
+
+    <h1>
+        PRE-TEST
+    </h1>
+    Allez sur ce site, créez un identifiant et répondez aux questions : <a href="https://www.cs411-moodle.com/mod/quiz/view.php?id=1229">https://www.cs411-moodle.com/mod/quiz/view.php?id=1229</a>
+    <br/>
+    <h1>
+      INSTRUCTION
+    </h1>
+    Maintenant, pourrais-tu s'il-te-plaît lire la présentation se trouvant sur cette page : <a href="https://www.cs411-moodle.com/pluginfile.php/8023/mod_resource/content/1/voting_systems_instructions_fr.pdf">https://www.cs411-moodle.com/pluginfile.php/8023/mod_resource/content/1/voting_systems_instructions_fr.pdf</a>
+    <h1>
+        PROBLÈMES
+    </h1>
+  
+    Fais gagner Jacques en un minimum de coups. Tu peux changer les préférence des électeurs en faisant un glisser-déposer.
+    <br/>
+
+    <iframe src="problem-solving-FR.htm" width="1000" height="450"></iframe>
+    <br/>
+    Fais gagner le parti A en changeant le vote d'aussi peu de gens que possible. Tu peux changer les résultat d'un État en utilisant le curseur.
+    <br/>
+    On peut noter que le parti B gagne largement, alors que c'est le parti A qui a eu le plus de voix.
+    <iframe src="problem-solving-US.htm" width="1000" height="350"></iframe>
+
+    <h1>
+      POST-TEST
+  </h1>
+  Allez sur ce site et repondez aux questions :
+  <a href="https://www.cs411-moodle.com/mod/quiz/view.php?id=1181">https://www.cs411-moodle.com/mod/quiz/view.php?id=1181</a>
+  </body>
+  <script>
+    init();
+    console.log(navigator.userAgent);
+  </script>
+</html>
