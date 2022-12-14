@@ -70,12 +70,12 @@
                 const e = document.getElementById("pie_" + idState);
                 e.setAttributeNS(null, "stroke-dasharray", 'calc(calc(' + states[idState] +' * 3.14159265358979 * 40)) calc(3.14159265358979 * 40)'); //soixante
                 const f = document.getElementById("rect_" + idState);
-                f.setAttributeNS(null, "fill", (states[idState] > 0.5) ? "blue" : "red");
+                f.setAttributeNS(null, "fill", (states[idState] > 0.5) ? "#3132c8" : "#cd2121");
             }
 
             function affiVoter(sharePartyA, nbElectorsState, idState) {
                 var center = 50 + xOfState(idState)
-                printVoters('<rect x="' + xOfState(idState) + '" y="10" width="100" height="200" fill="' + ((sharePartyA > 0.5) ? "blue" : "red") + '" stroke="black" id="rect_' + idState + '" />');
+                printVoters('<rect x="' + xOfState(idState) + '" y="10" width="100" height="200" fill="' + ((sharePartyA > 0.5) ? "#3132c8" : "#cd2121") + '" stroke="black" id="rect_' + idState + '" />');
                 printVoters('<text x="' + center + '" y="35" text-anchor="middle" fill="white" font-size="20">State ' + voterLetterFromId(idState, true) + '</text>');
                 printVoters('<text x="' + center + '" y="55" text-anchor="middle" fill="white" font-size="20">' + nbElectorsState + ' electors</text>');
                 
@@ -87,8 +87,8 @@
                 printVoters(slider);
 
                 printVoters('<div>'); //pie chart
-                printVoters('\t<circle cx="' + center + '" cy="145" r="40" fill="red" stroke="black" stroke-width="2" />');
-                printVoters('\t<circle cx="' + center + '" cy="145" r="20" fill="transparent" stroke="blue" stroke-width="40" stroke-dasharray="calc(calc(' + sharePartyA +' * 3.14159265358979 * 40)) calc(3.14159265358979 * 40)" id="pie_' + idState + '" />');
+                printVoters('\t<circle cx="' + center + '" cy="145" r="40" fill="#cd2121" stroke="black" stroke-width="2" />');
+                printVoters('\t<circle cx="' + center + '" cy="145" r="20" fill="transparent" stroke="#3132c8" stroke-width="40" stroke-dasharray="calc(calc(' + sharePartyA +' * 3.14159265358979 * 40)) calc(3.14159265358979 * 40)" id="pie_' + idState + '" />');
                 printVoters('</div>');
 
                 printVoters('</g>');
@@ -103,15 +103,16 @@
 
                 //results of the electoral college
                 printResults('<rect x="10" y="210" width="300" height="96" fill="white" stroke="black" />');
+                printResults('<rect x="12" y="' + (230 + ((electoralVote[0] <= electoralVote[1])*30)) + '" width="200" height="27" fill="white" stroke="black" />');
                 printResults('<text x="170" y="225" text-anchor="middle">Results of the electoral college:</text>');
-                printResults('<text x="15" y="250" fill="blue">' + electoralVote[0] + ' electoral votes for Party A</text>');
-                printResults('<text x="15" y="280" fill="red">' + electoralVote[1] + ' electoral votes for Party B</text>');
+                printResults('<text x="15" y="250" fill="#3132c8">' + electoralVote[0] + ' electoral votes for Party A</text>');
+                printResults('<text x="15" y="280" fill="#cd2121">' + electoralVote[1] + ' electoral votes for Party B</text>');
 
                 //results of the popular vote
                 printResults('<rect x="310" y="210" width="300" height="96" fill="white" stroke="black" />');
                 printResults('<text x="460" y="225" text-anchor="middle">Results of the popular vote:</text>');
-                printResults('<text x="315" y="250" fill="blue">' + popularVote[0] + ' popular votes for Party A</text>');
-                printResults('<text x="315" y="280" fill="red">' + popularVote[1] + ' popular votes for Party B</text>');
+                printResults('<text x="315" y="250" fill="#3132c8">' + popularVote[0] + ' popular votes for Party A</text>');
+                printResults('<text x="315" y="280" fill="#cd2121">' + popularVote[1] + ' popular votes for Party B</text>');
 
                 affiNbChanges();
             }
@@ -221,7 +222,7 @@
             <g id="nb_changes">
 
             </g>
-            <rect x="620" y="255" width="80" height="50" fill="red" id="reset_bt" />
+            <rect x="620" y="255" width="80" height="50" fill="#cd2121" id="reset_bt" />
             <text x="660" y="285" font-size="20" text-anchor="middle" fill="white" id="reset_txt">RESET</text>
         </svg>
         <script>
