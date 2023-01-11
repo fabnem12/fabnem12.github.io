@@ -42,6 +42,11 @@ function checkCookie() {
   } else {
     init(ident);
   }
+  
+  //check the browser and alert if firefox
+  if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1){
+     alert("Hello !\nManifestement tu utilises firefox, il est recommandé de faire cette activité sur un autre navigateur (Chrome/Chromium, Microsoft Edge, Safari), il y a un bug d'affichage connu sur firefox qui peut prêter à confusion");
+  }
 }
     </script>
   </head>
