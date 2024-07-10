@@ -8,11 +8,35 @@
 
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script src="https://cdn.tailwindcss.com"></script>
+        <!--<script src="https://cdn.tailwindcss.com"></script>-->
+
+        <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
     </head>
-    <body>
-        <h1 class="text-xl text-center">
-            Qui ne sera <span class="underline underline-offset-2">pas</span> Premier Ministre ?
-        </h1>
+    <body class="space-y-24">
+        <header class="space-y-10">
+            <h1 class="text-6xl text-center">
+                Qui ne sera <span class="underline underline-offset-8">pas</span> Premier Ministre ?
+            </h1>
+
+            <div class="text-center text-2xl">
+                <span>550</span> députés ne se sont pas proposés pour être Premier Ministre
+            </div>
+        </header>
+
+        <article class="text-center border-2 border-red-600">
+            Ce n'est pas le cas de :
+
+            <ul class="mx-auto w-[550px]">
+                <li>
+                    Olivier Faure
+                    <blockquote class="twitter-tweet text-center">
+                        <a href="https://twitter.com/libe/status/1810673081880314365"></a>
+                    </blockquote>
+                </li>
+                <li>
+                    Clémence Guetté
+                </li>
+            </ul>
+        </article>
     </body>
 </html>
